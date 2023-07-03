@@ -4,6 +4,9 @@ A GUI for a youtube downloader library (yt-dlp)
 ## How do i use this?
 Pretty simple just open the "YT-DLP-Imp.exe" and from there I am sure everything will be clear.
 
+## Common Issues
+Could not find ffmpeg, ffplay or ffprobe just watch a youtube video on how to install ffmpeg.
+
 ## Credits
 https://github.com/yt-dlp/yt-dlp Is the base for this program even though i am not required to mention them by law because they go under the "unlicense" license.
 
