@@ -6,9 +6,9 @@ Pretty simple just open the "YT-DLP-Imp.exe" and from there I am sure everything
 
 | For | Max/Min File size |
 |------|--------------|
-| kilobyte (kB) | k |
-| megabyte (MB) | m |
-| gigabyte (GB) | g |
+| 1 kilobyte (kB) | 1k |
+| 1 megabyte (MB) | 1m |
+| 1 gigabyte (GB) | 1g |
 
 
 ## Common Issues
