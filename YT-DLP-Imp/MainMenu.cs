@@ -19,6 +19,8 @@ namespace YT_DLP_Imp
 
             inputTextBoxes.Add(textBoxURL);
             inputTextBoxes.Add(textBoxFormat);
+            inputTextBoxes.Add(textBoxMaxFileSize);
+            inputTextBoxes.Add(textBoxMinFileSize);
         }
 
         public void Downloader()
@@ -82,6 +84,17 @@ namespace YT_DLP_Imp
                         input = "-f " + input;
                     }
                 }
+                if (textBox.Name == "textBoxMaxFileSize" && !string.IsNullOrEmpty(input))
+                {
+
+                    input = "--max-filesize " + input;
+                }
+                if (textBox.Name == "textBoxMinFileSize" && !string.IsNullOrEmpty(input))
+                {
+
+                    input = "--min-filesize " + input;
+                }
+
                 inputs.Add(input);
             }
 
@@ -115,6 +128,16 @@ namespace YT_DLP_Imp
             GithubstartInfo.CreateNoWindow = true;
             GithubstartInfo.UseShellExecute = false;
             Process.Start(GithubstartInfo);
+        }
+
+        private void textBoxMaxFileSize_TextChanged(object sender, EventArgs e)
+        {
+            UpdateArgumentCluster();
+        }
+
+        private void textBoxMinFileSize_TextChanged(object sender, EventArgs e)
+        {
+            UpdateArgumentCluster();
         }
     }
 }

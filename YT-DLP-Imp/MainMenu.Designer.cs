@@ -37,6 +37,10 @@
             textBoxFormat = new TextBox();
             checkBoxAudio = new CheckBox();
             linkLabelGithub = new LinkLabel();
+            textBoxMaxFileSize = new TextBox();
+            labelMaxFileSize = new Label();
+            labelMinFileSize = new Label();
+            textBoxMinFileSize = new TextBox();
             SuspendLayout();
             // 
             // FinalArgumentBox
@@ -124,12 +128,56 @@
             linkLabelGithub.Text = "Github";
             linkLabelGithub.LinkClicked += linkLabelGithub_LinkClicked;
             // 
+            // textBoxMaxFileSize
+            // 
+            textBoxMaxFileSize.BackColor = Color.FromArgb(171, 42, 65);
+            textBoxMaxFileSize.Location = new Point(114, 88);
+            textBoxMaxFileSize.Name = "textBoxMaxFileSize";
+            textBoxMaxFileSize.Size = new Size(210, 27);
+            textBoxMaxFileSize.TabIndex = 8;
+            textBoxMaxFileSize.TextChanged += textBoxMaxFileSize_TextChanged;
+            // 
+            // labelMaxFileSize
+            // 
+            labelMaxFileSize.AutoSize = true;
+            labelMaxFileSize.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMaxFileSize.ForeColor = Color.FromArgb(171, 42, 65);
+            labelMaxFileSize.Location = new Point(6, 91);
+            labelMaxFileSize.Name = "labelMaxFileSize";
+            labelMaxFileSize.Size = new Size(102, 18);
+            labelMaxFileSize.TabIndex = 9;
+            labelMaxFileSize.Text = "Max File Size";
+            // 
+            // labelMinFileSize
+            // 
+            labelMinFileSize.AutoSize = true;
+            labelMinFileSize.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMinFileSize.ForeColor = Color.FromArgb(171, 42, 65);
+            labelMinFileSize.Location = new Point(6, 124);
+            labelMinFileSize.Name = "labelMinFileSize";
+            labelMinFileSize.Size = new Size(99, 18);
+            labelMinFileSize.TabIndex = 11;
+            labelMinFileSize.Text = "Min File Size";
+            // 
+            // textBoxMinFileSize
+            // 
+            textBoxMinFileSize.BackColor = Color.FromArgb(171, 42, 65);
+            textBoxMinFileSize.Location = new Point(114, 121);
+            textBoxMinFileSize.Name = "textBoxMinFileSize";
+            textBoxMinFileSize.Size = new Size(210, 27);
+            textBoxMinFileSize.TabIndex = 10;
+            textBoxMinFileSize.TextChanged += textBoxMinFileSize_TextChanged;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 32, 33);
             ClientSize = new Size(800, 450);
+            Controls.Add(labelMinFileSize);
+            Controls.Add(textBoxMinFileSize);
+            Controls.Add(labelMaxFileSize);
+            Controls.Add(textBoxMaxFileSize);
             Controls.Add(linkLabelGithub);
             Controls.Add(checkBoxAudio);
             Controls.Add(textBoxFormat);
@@ -156,5 +204,9 @@
         private TextBox textBoxFormat;
         private CheckBox checkBoxAudio;
         private LinkLabel linkLabelGithub;
+        private TextBox textBoxMaxFileSize;
+        private Label labelMaxFileSize;
+        private Label labelMinFileSize;
+        private TextBox textBoxMinFileSize;
     }
 }
