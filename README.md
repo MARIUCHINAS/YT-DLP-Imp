@@ -4,6 +4,13 @@ A GUI for a youtube downloader library (yt-dlp)
 ## How do i use this?
 Pretty simple just open the "YT-DLP-Imp.exe" and from there I am sure everything will be clear.
 
+| For | Max/Min File size |
+|------|--------------|
+| kilobyte (kB) | k |
+| megabyte (MB) | m |
+| gigabyte (GB) | g |
+
+
 ## Common Issues
 Could not find ffmpeg, ffplay or ffprobe  [+]  Just watch a youtube video on how to install ffmpeg.
 
