@@ -36,6 +36,7 @@
             labelFormat = new Label();
             textBoxFormat = new TextBox();
             checkBoxAudio = new CheckBox();
+            linkLabelGithub = new LinkLabel();
             SuspendLayout();
             // 
             // FinalArgumentBox
@@ -111,12 +112,25 @@
             checkBoxAudio.UseVisualStyleBackColor = true;
             checkBoxAudio.CheckedChanged += checkBoxAudio_CheckedChanged;
             // 
+            // linkLabelGithub
+            // 
+            linkLabelGithub.AutoSize = true;
+            linkLabelGithub.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelGithub.Location = new Point(6, 417);
+            linkLabelGithub.Name = "linkLabelGithub";
+            linkLabelGithub.Size = new Size(74, 24);
+            linkLabelGithub.TabIndex = 7;
+            linkLabelGithub.TabStop = true;
+            linkLabelGithub.Text = "Github";
+            linkLabelGithub.LinkClicked += linkLabelGithub_LinkClicked;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 32, 33);
             ClientSize = new Size(800, 450);
+            Controls.Add(linkLabelGithub);
             Controls.Add(checkBoxAudio);
             Controls.Add(textBoxFormat);
             Controls.Add(labelFormat);
@@ -126,7 +140,7 @@
             Controls.Add(FinalArgumentBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainMenu";
-            Text = "Form1";
+            Text = "Youtube Downloader";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -141,5 +155,6 @@
         private Label labelFormat;
         private TextBox textBoxFormat;
         private CheckBox checkBoxAudio;
+        private LinkLabel linkLabelGithub;
     }
 }

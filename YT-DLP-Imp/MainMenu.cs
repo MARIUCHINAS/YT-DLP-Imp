@@ -1,4 +1,6 @@
+using System;
 using System.Diagnostics;
+using System.Security.Policy;
 
 namespace YT_DLP_Imp
 {
@@ -6,6 +8,8 @@ namespace YT_DLP_Imp
     {
         string argumentCluster;
         string FinalArguments;
+
+        string urlGithub = "https://github.com/MARIUCHINAS/YT-DLP-Imp";
 
         private List<TextBox> inputTextBoxes = new List<TextBox>();
 
@@ -68,7 +72,7 @@ namespace YT_DLP_Imp
                 string input = textBox.Text;
                 if (textBox.Name == "textBoxFormat" && !string.IsNullOrEmpty(input))
                 {
-                    
+
                     if (checkBoxAudio.Checked)
                     {
                         input = "-x --audio-format " + input;
@@ -103,6 +107,14 @@ namespace YT_DLP_Imp
         private void checkBoxAudio_CheckedChanged(object sender, EventArgs e)
         {
             UpdateArgumentCluster();
+        }
+
+        private void linkLabelGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo GithubstartInfo = new ProcessStartInfo("cmd", $"/c start {urlGithub}");
+            GithubstartInfo.CreateNoWindow = true;
+            GithubstartInfo.UseShellExecute = false;
+            Process.Start(GithubstartInfo);
         }
     }
 }
