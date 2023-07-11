@@ -41,6 +41,9 @@
             labelMaxFileSize = new Label();
             labelMinFileSize = new Label();
             textBoxMinFileSize = new TextBox();
+            labelMaxDownloads = new Label();
+            textBoxMaxDownloads = new TextBox();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // FinalArgumentBox
@@ -168,12 +171,47 @@
             textBoxMinFileSize.TabIndex = 10;
             textBoxMinFileSize.TextChanged += textBoxMinFileSize_TextChanged;
             // 
+            // labelMaxDownloads
+            // 
+            labelMaxDownloads.AutoSize = true;
+            labelMaxDownloads.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMaxDownloads.ForeColor = Color.FromArgb(171, 42, 65);
+            labelMaxDownloads.Location = new Point(6, 166);
+            labelMaxDownloads.Name = "labelMaxDownloads";
+            labelMaxDownloads.Size = new Size(119, 18);
+            labelMaxDownloads.TabIndex = 13;
+            labelMaxDownloads.Text = "Max Downloads";
+            // 
+            // textBoxMaxDownloads
+            // 
+            textBoxMaxDownloads.BackColor = Color.FromArgb(171, 42, 65);
+            textBoxMaxDownloads.Location = new Point(131, 162);
+            textBoxMaxDownloads.Name = "textBoxMaxDownloads";
+            textBoxMaxDownloads.Size = new Size(193, 27);
+            textBoxMaxDownloads.TabIndex = 12;
+            textBoxMaxDownloads.TextChanged += textBoxMaxDownloads_TextChanged;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.FromArgb(171, 42, 65);
+            checkBox1.Location = new Point(330, 14);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(100, 22);
+            checkBox1.TabIndex = 14;
+            checkBox1.Text = "Audio File";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 32, 33);
             ClientSize = new Size(800, 450);
+            Controls.Add(checkBox1);
+            Controls.Add(labelMaxDownloads);
+            Controls.Add(textBoxMaxDownloads);
             Controls.Add(labelMinFileSize);
             Controls.Add(textBoxMinFileSize);
             Controls.Add(labelMaxFileSize);
@@ -208,5 +246,8 @@
         private Label labelMaxFileSize;
         private Label labelMinFileSize;
         private TextBox textBoxMinFileSize;
+        private Label labelMaxDownloads;
+        private TextBox textBoxMaxDownloads;
+        private CheckBox checkBox1;
     }
 }

@@ -21,6 +21,7 @@ namespace YT_DLP_Imp
             inputTextBoxes.Add(textBoxFormat);
             inputTextBoxes.Add(textBoxMaxFileSize);
             inputTextBoxes.Add(textBoxMinFileSize);
+            inputTextBoxes.Add(textBoxMaxDownloads);
         }
 
         public void Downloader()
@@ -94,6 +95,10 @@ namespace YT_DLP_Imp
 
                     input = "--min-filesize " + input;
                 }
+                if (textBox.Name == "textBoxMaxDownloads" && !string.IsNullOrEmpty(input))
+                {
+                    input = "--max-downloads " + input;
+                }
 
                 inputs.Add(input);
             }
@@ -136,6 +141,11 @@ namespace YT_DLP_Imp
         }
 
         private void textBoxMinFileSize_TextChanged(object sender, EventArgs e)
+        {
+            UpdateArgumentCluster();
+        }
+
+        private void textBoxMaxDownloads_TextChanged(object sender, EventArgs e)
         {
             UpdateArgumentCluster();
         }
