@@ -10,6 +10,11 @@ Pretty simple just open the "YT-DLP-Imp.exe" and from there I am sure everything
 | 1 megabyte (MB) | 1m |
 | 1 gigabyte (GB) | 1g |
 
+Audio Quality
+| Best | Worst |
+|------|--------------|
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
 
 ## Common Issues
 Could not find ffmpeg, ffplay or ffprobe  [+]  Just watch a youtube video on how to install ffmpeg.
