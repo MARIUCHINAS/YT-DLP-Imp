@@ -11,8 +11,9 @@ Pretty simple just open the "YT-DLP-Imp.exe" and from there I am sure everything
 | 1 gigabyte (GB) | 1g |
 
 Audio Quality
-| Best |                                | Worst |
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| Best | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|------|---|---|---|---|---|---|---|---|---|---|----|
+| Worst| 10| 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0  |
 
 
 ## Common Issues
