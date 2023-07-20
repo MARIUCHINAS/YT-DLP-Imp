@@ -43,7 +43,11 @@
             textBoxMinFileSize = new TextBox();
             labelMaxDownloads = new Label();
             textBoxMaxDownloads = new TextBox();
-            checkBox1 = new CheckBox();
+            ThumbNailcheckBox = new CheckBox();
+            AllThumbnailcheckBox = new CheckBox();
+            checkBoxWriteSubtitles = new CheckBox();
+            labelAudioQuality = new Label();
+            textBoxAudioQuality = new TextBox();
             SuspendLayout();
             // 
             // FinalArgumentBox
@@ -134,7 +138,7 @@
             // textBoxMaxFileSize
             // 
             textBoxMaxFileSize.BackColor = Color.FromArgb(171, 42, 65);
-            textBoxMaxFileSize.Location = new Point(114, 88);
+            textBoxMaxFileSize.Location = new Point(114, 119);
             textBoxMaxFileSize.Name = "textBoxMaxFileSize";
             textBoxMaxFileSize.Size = new Size(210, 27);
             textBoxMaxFileSize.TabIndex = 8;
@@ -145,7 +149,7 @@
             labelMaxFileSize.AutoSize = true;
             labelMaxFileSize.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelMaxFileSize.ForeColor = Color.FromArgb(171, 42, 65);
-            labelMaxFileSize.Location = new Point(6, 91);
+            labelMaxFileSize.Location = new Point(6, 122);
             labelMaxFileSize.Name = "labelMaxFileSize";
             labelMaxFileSize.Size = new Size(102, 18);
             labelMaxFileSize.TabIndex = 9;
@@ -156,7 +160,7 @@
             labelMinFileSize.AutoSize = true;
             labelMinFileSize.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelMinFileSize.ForeColor = Color.FromArgb(171, 42, 65);
-            labelMinFileSize.Location = new Point(6, 124);
+            labelMinFileSize.Location = new Point(6, 155);
             labelMinFileSize.Name = "labelMinFileSize";
             labelMinFileSize.Size = new Size(99, 18);
             labelMinFileSize.TabIndex = 11;
@@ -165,7 +169,7 @@
             // textBoxMinFileSize
             // 
             textBoxMinFileSize.BackColor = Color.FromArgb(171, 42, 65);
-            textBoxMinFileSize.Location = new Point(114, 121);
+            textBoxMinFileSize.Location = new Point(114, 152);
             textBoxMinFileSize.Name = "textBoxMinFileSize";
             textBoxMinFileSize.Size = new Size(210, 27);
             textBoxMinFileSize.TabIndex = 10;
@@ -176,7 +180,7 @@
             labelMaxDownloads.AutoSize = true;
             labelMaxDownloads.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelMaxDownloads.ForeColor = Color.FromArgb(171, 42, 65);
-            labelMaxDownloads.Location = new Point(6, 166);
+            labelMaxDownloads.Location = new Point(6, 197);
             labelMaxDownloads.Name = "labelMaxDownloads";
             labelMaxDownloads.Size = new Size(119, 18);
             labelMaxDownloads.TabIndex = 13;
@@ -185,23 +189,71 @@
             // textBoxMaxDownloads
             // 
             textBoxMaxDownloads.BackColor = Color.FromArgb(171, 42, 65);
-            textBoxMaxDownloads.Location = new Point(131, 162);
+            textBoxMaxDownloads.Location = new Point(131, 193);
             textBoxMaxDownloads.Name = "textBoxMaxDownloads";
             textBoxMaxDownloads.Size = new Size(193, 27);
             textBoxMaxDownloads.TabIndex = 12;
             textBoxMaxDownloads.TextChanged += textBoxMaxDownloads_TextChanged;
             // 
-            // checkBox1
+            // ThumbNailcheckBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBox1.ForeColor = Color.FromArgb(171, 42, 65);
-            checkBox1.Location = new Point(330, 14);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(100, 22);
-            checkBox1.TabIndex = 14;
-            checkBox1.Text = "Audio File";
-            checkBox1.UseVisualStyleBackColor = true;
+            ThumbNailcheckBox.AutoSize = true;
+            ThumbNailcheckBox.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ThumbNailcheckBox.ForeColor = Color.FromArgb(171, 42, 65);
+            ThumbNailcheckBox.Location = new Point(6, 291);
+            ThumbNailcheckBox.Name = "ThumbNailcheckBox";
+            ThumbNailcheckBox.Size = new Size(182, 22);
+            ThumbNailcheckBox.TabIndex = 14;
+            ThumbNailcheckBox.Text = "Download Thumbnail ";
+            ThumbNailcheckBox.UseVisualStyleBackColor = true;
+            ThumbNailcheckBox.CheckedChanged += ThumbNailcheckBox_CheckedChanged;
+            // 
+            // AllThumbnailcheckBox
+            // 
+            AllThumbnailcheckBox.AutoSize = true;
+            AllThumbnailcheckBox.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            AllThumbnailcheckBox.ForeColor = Color.FromArgb(171, 42, 65);
+            AllThumbnailcheckBox.Location = new Point(6, 319);
+            AllThumbnailcheckBox.Name = "AllThumbnailcheckBox";
+            AllThumbnailcheckBox.Size = new Size(210, 22);
+            AllThumbnailcheckBox.TabIndex = 15;
+            AllThumbnailcheckBox.Text = "Download All Thumbnails ";
+            AllThumbnailcheckBox.UseVisualStyleBackColor = true;
+            AllThumbnailcheckBox.CheckedChanged += AllThumbnailcheckBox_CheckedChanged;
+            // 
+            // checkBoxWriteSubtitles
+            // 
+            checkBoxWriteSubtitles.AutoSize = true;
+            checkBoxWriteSubtitles.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBoxWriteSubtitles.ForeColor = Color.FromArgb(171, 42, 65);
+            checkBoxWriteSubtitles.Location = new Point(6, 360);
+            checkBoxWriteSubtitles.Name = "checkBoxWriteSubtitles";
+            checkBoxWriteSubtitles.Size = new Size(198, 22);
+            checkBoxWriteSubtitles.TabIndex = 16;
+            checkBoxWriteSubtitles.Text = "Write Subtitles To a File";
+            checkBoxWriteSubtitles.UseVisualStyleBackColor = true;
+            checkBoxWriteSubtitles.CheckedChanged += checkBoxWriteSubtitles_CheckedChanged;
+            // 
+            // labelAudioQuality
+            // 
+            labelAudioQuality.AutoSize = true;
+            labelAudioQuality.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelAudioQuality.ForeColor = Color.FromArgb(171, 42, 65);
+            labelAudioQuality.Location = new Point(6, 91);
+            labelAudioQuality.Name = "labelAudioQuality";
+            labelAudioQuality.Size = new Size(101, 18);
+            labelAudioQuality.TabIndex = 4;
+            labelAudioQuality.Text = "Audio Quality";
+            labelAudioQuality.Click += label1_Click;
+            // 
+            // textBoxAudioQuality
+            // 
+            textBoxAudioQuality.BackColor = Color.FromArgb(171, 42, 65);
+            textBoxAudioQuality.Location = new Point(113, 86);
+            textBoxAudioQuality.Name = "textBoxAudioQuality";
+            textBoxAudioQuality.Size = new Size(211, 27);
+            textBoxAudioQuality.TabIndex = 5;
+            textBoxAudioQuality.TextChanged += textBox1_TextChanged_1;
             // 
             // MainMenu
             // 
@@ -209,7 +261,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 32, 33);
             ClientSize = new Size(800, 450);
-            Controls.Add(checkBox1);
+            Controls.Add(checkBoxWriteSubtitles);
+            Controls.Add(AllThumbnailcheckBox);
+            Controls.Add(ThumbNailcheckBox);
             Controls.Add(labelMaxDownloads);
             Controls.Add(textBoxMaxDownloads);
             Controls.Add(labelMinFileSize);
@@ -218,6 +272,8 @@
             Controls.Add(textBoxMaxFileSize);
             Controls.Add(linkLabelGithub);
             Controls.Add(checkBoxAudio);
+            Controls.Add(textBoxAudioQuality);
+            Controls.Add(labelAudioQuality);
             Controls.Add(textBoxFormat);
             Controls.Add(labelFormat);
             Controls.Add(labelURL);
@@ -248,6 +304,10 @@
         private TextBox textBoxMinFileSize;
         private Label labelMaxDownloads;
         private TextBox textBoxMaxDownloads;
-        private CheckBox checkBox1;
+        private CheckBox ThumbNailcheckBox;
+        private CheckBox AllThumbnailcheckBox;
+        private CheckBox checkBoxWriteSubtitles;
+        private Label labelAudioQuality;
+        private TextBox textBoxAudioQuality;
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Policy;
 
@@ -22,6 +23,7 @@ namespace YT_DLP_Imp
             inputTextBoxes.Add(textBoxMaxFileSize);
             inputTextBoxes.Add(textBoxMinFileSize);
             inputTextBoxes.Add(textBoxMaxDownloads);
+            inputTextBoxes.Add(textBoxAudioQuality);
         }
 
         public void Downloader()
@@ -84,7 +86,10 @@ namespace YT_DLP_Imp
                     {
                         input = "-f " + input;
                     }
+
+
                 }
+
                 if (textBox.Name == "textBoxMaxFileSize" && !string.IsNullOrEmpty(input))
                 {
 
@@ -101,6 +106,25 @@ namespace YT_DLP_Imp
                 }
 
                 inputs.Add(input);
+            }
+
+            if (ThumbNailcheckBox.Checked)
+            {
+                inputs.Add("--write-thumbnail");
+            }
+
+            if (AllThumbnailcheckBox.Checked)
+            {
+                inputs.Add("--write-all-thumbnails");
+            }
+
+            if (checkBoxWriteSubtitles.Checked)
+            {
+                inputs.Add("--write-subs");
+            }
+            else
+            {
+                inputs.Add("--no-write-subs");
             }
 
             argumentCluster = "yt-dlp.exe " + string.Join(" ", inputs);
@@ -146,6 +170,30 @@ namespace YT_DLP_Imp
         }
 
         private void textBoxMaxDownloads_TextChanged(object sender, EventArgs e)
+        {
+            UpdateArgumentCluster();
+        }
+
+        private void ThumbNailcheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ThumbNailcheckBox.Checked)
+            {
+                AllThumbnailcheckBox.Checked = false;
+            }
+            UpdateArgumentCluster();
+        }
+
+        private void AllThumbnailcheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AllThumbnailcheckBox.Checked)
+            {
+                ThumbNailcheckBox.Checked = false;
+            }
+
+            UpdateArgumentCluster();
+        }
+
+        private void checkBoxWriteSubtitles_CheckedChanged(object sender, EventArgs e)
         {
             UpdateArgumentCluster();
         }
