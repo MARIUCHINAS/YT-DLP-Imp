@@ -48,6 +48,7 @@
             checkBoxWriteSubtitles = new CheckBox();
             labelAudioQuality = new Label();
             textBoxAudioQuality = new TextBox();
+            WriteCommentscheckBox = new CheckBox();
             SuspendLayout();
             // 
             // FinalArgumentBox
@@ -255,12 +256,26 @@
             textBoxAudioQuality.TabIndex = 5;
             textBoxAudioQuality.TextChanged += textBox1_TextChanged_1;
             // 
+            // WriteCommentscheckBox
+            // 
+            WriteCommentscheckBox.AutoSize = true;
+            WriteCommentscheckBox.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            WriteCommentscheckBox.ForeColor = Color.FromArgb(171, 42, 65);
+            WriteCommentscheckBox.Location = new Point(6, 249);
+            WriteCommentscheckBox.Name = "WriteCommentscheckBox";
+            WriteCommentscheckBox.Size = new Size(146, 22);
+            WriteCommentscheckBox.TabIndex = 17;
+            WriteCommentscheckBox.Text = "Write Comments";
+            WriteCommentscheckBox.UseVisualStyleBackColor = true;
+            WriteCommentscheckBox.CheckedChanged += WriteCommentscheckBox_CheckedChanged;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 32, 33);
             ClientSize = new Size(800, 450);
+            Controls.Add(WriteCommentscheckBox);
             Controls.Add(checkBoxWriteSubtitles);
             Controls.Add(AllThumbnailcheckBox);
             Controls.Add(ThumbNailcheckBox);
@@ -309,5 +324,6 @@
         private CheckBox checkBoxWriteSubtitles;
         private Label labelAudioQuality;
         private TextBox textBoxAudioQuality;
+        private CheckBox WriteCommentscheckBox;
     }
 }

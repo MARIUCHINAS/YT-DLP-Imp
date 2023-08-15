@@ -126,6 +126,15 @@ namespace YT_DLP_Imp
             {
                 inputs.Add("--no-write-subs");
             }
+            
+            if (WriteCommentscheckBox.Checked)
+            {
+                inputs.Add("--write-comments");
+            }
+            else
+            {
+                inputs.Add("--no-write-comments");
+            }
 
             argumentCluster = "yt-dlp.exe " + string.Join(" ", inputs);
             FinalArgumentBox.Text = argumentCluster;
@@ -194,6 +203,11 @@ namespace YT_DLP_Imp
         }
 
         private void checkBoxWriteSubtitles_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateArgumentCluster();
+        }
+
+        private void WriteCommentscheckBox_CheckedChanged(object sender, EventArgs e)
         {
             UpdateArgumentCluster();
         }
