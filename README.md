@@ -20,10 +20,10 @@ Audio Quality
 Could not find ffmpeg, ffplay or ffprobe  [+]  Just watch a youtube video on how to install ffmpeg.
 
 ## Credits
-https://github.com/yt-dlp/yt-dlp Is the base for this program even though i am not required to mention them by law because they go under the "unlicense" license I will still do.
+https://github.com/yt-dlp/yt-dlp Is the library I am using to download the videos.
 
 # Contribute?
-Feel free to contribute to this project it was made in visual studio c# .NET 6.0
+Feel free to contribute to this project it was made in visual studio c# .NET 6.0.
 
 ## License
 Because the original "yt-dlp" goes under the "unlicense" license. I decided to also choose the "unlicense" license.
